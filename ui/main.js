@@ -1,20 +1,23 @@
-console.log('Loaded!');
-//change html content
-var element=document.getElementById('main-text');
-element.innerHTML= 'something new';
-
-//move the image
-var img=document.getElementById('madi');
-var marginLeft = 0;
-function marginRight(){
+var button=document.getElementById('counter');
+button.onclick=function(){
+    //creating request object
+    var request = new XMLHttpRequest();
     
-    marginLeft = marginLeft+  5;
-      img.style.marginLeft = marginLeft +'px';
-}
-
-img.onclick = function () {
-    var interval = setInterval(marginRight,50);
-  
-
+    
+    //capture the request and store it
+    
+    request.onreadystatechange = function(){
+        if(request.readystate == XMLHttpRequest.DONE)
+        {
+            if(request.status == 200){
+            var counter = request.responseText;
+            var span = document.getElementById('count');
+            span.innerHTML = counter.toString();
+        }
+     }
+  };
+  //make request
+  request.open('GET','http://a-diti.imad.hasura-app.io/',true);
+  request.send(null);
     
 };
