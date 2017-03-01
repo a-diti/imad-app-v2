@@ -1,12 +1,12 @@
 var button=document.getElementById('counter');
-button.onclick=function(){
+button.onclick = function () {
     //creating request object
     var request = new XMLHttpRequest();
     
     
     //capture the request and store it
     
-    request.onreadystatechange = function(){
+    request.onreadystatechange = function () {
         if(request.readystate == XMLHttpRequest.DONE)
         {
             if(request.status == 200){
