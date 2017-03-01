@@ -1,9 +1,8 @@
 var button=document.getElementById('counter');
-var counter=0;
 
 button.onclick = function () {
     //creating request object
-   /* var request = new XMLHttpRequest();
+    var request = new XMLHttpRequest();
     
     
     //capture the request and store it
@@ -12,15 +11,14 @@ button.onclick = function () {
         if(request.readystate == XMLHttpRequest.DONE)
         {
             if(request.status == 200){
-            var counter = request.responseText;*/
-            counter = counter + 1;
+            var counter = request.responseText;
             var span = document.getElementById('count');
             span.innerHTML = counter.toString();
-      /*  }
+       }
      }
   };
   //make request
   request.open('GET','http://a-diti.imad.hasura-app.io/counter',true);
-  request.send(null);*/
+  request.send(null);
     
 };
