@@ -8,7 +8,7 @@ button.onclick = function () {
     //capture the request and store it
     
    request.onreadystatechange = function () {
-        if(request.readystate === XMLHttpRequest.DONE)
+        if(request.readyState === XMLHttpRequest.DONE)
         {
             if(request.status === 200){
             var counter = request.responseText;
@@ -18,7 +18,7 @@ button.onclick = function () {
      }
   };
   //make request
-  request.open('GET','http://a-diti.imad.hasura-app.io/counter',true);
+  request.open('GET','http://a-diti.imad.hasura-app.io/counter', true);
   request.send(null);
     
 };
