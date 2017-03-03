@@ -116,6 +116,17 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+ 
+ 
+var names = [];
+app.get('/submit-name',function(req, res){
+    var name;
+    names.push(name);
+    res.send(names);
+    
+});
+
+
 
 app.get('/favicon.ico', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi1.png'));
