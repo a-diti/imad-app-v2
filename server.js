@@ -10,7 +10,7 @@ var config = {
   port: '5432',
   user: 'a-diti',
   database: 'a-diti',
-   password:process.env.DB_PASSWORD
+   password:'db-a-diti-99909'
 };
 
 
